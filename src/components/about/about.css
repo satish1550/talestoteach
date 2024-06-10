@@ -1,0 +1,50 @@
+.aboutContainer {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Domine';
+}
+
+.aboutLeft {
+    margin-left: 15%;
+    margin-top: 30px;
+}
+
+.aboutLeftTitle {
+    display: flex;
+    align-items: center;
+    background: #eeb3e7;
+    width: 50%;
+    border-radius: 25px 25px 0px 0px;
+    height: 70px;
+    padding: 20px;
+}
+
+.aboutLeftTitle>h1 {
+    font-size: 36px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.aboutLeftContent {
+    background-color: white;
+    width: 70%;
+    border-radius: 25px;
+    padding: 40px 20px;
+    margin-top: -20px;
+}
+
+.aboutLeftContent>p {
+    font-size: 18px;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+}
+
+.aboutRightImage {
+    height: 100vh;
+}
+
+.social>img {
+    margin-right: 10px;
+}

@@ -1,0 +1,45 @@
+.navContainer {
+    height: 60px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logoContainer {
+    display: flex;
+}
+
+.logoImage {
+    width: 30px;
+    margin-right: 10px;
+}
+.navContainer .items {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Domine";
+}
+
+.navContainer .items a {
+    text-decoration: none;
+    color: black;
+}
+
+.navContainer .items > div:hover {
+    color: #dc143c;
+}
+
+.logo {
+    font-family: "Domine";
+    font-weight: bold;
+    background: linear-gradient(45deg, #dc143c, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
