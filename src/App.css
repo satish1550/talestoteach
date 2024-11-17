@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,36 +14,4 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
-}
-
-.container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-}
-.home {
-    background: #82a1fd
-}
-
-.about {
-    background: #dffd6e
-}
-
-.products {
-    background: #82a1fd
-}
-
-.catalogue {
-    background: #82a1fd
-}
-.storytelling {
-    background: #eeb3e7;
-}
-.team {
-    background: #82a1fd;
-}
-
-.contact {
-    background: #dffd6e;
 }
