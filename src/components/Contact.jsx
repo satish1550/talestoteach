@@ -8,7 +8,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, threshold: 0.2 });
 
   return (
-    <div ref={ref} className="w-full min-h-screen font-serif flex flex-col lg:flex-row items-center justify-around p-5 bg-[#dffd6e]">
+    <div ref={ref} id="contact" className="w-full min-h-screen font-serif flex flex-col lg:flex-row items-center justify-around p-5 bg-[#dffd6e]">
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}

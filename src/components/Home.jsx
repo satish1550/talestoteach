@@ -11,15 +11,16 @@ export default function Home() {
   return (
     <motion.div 
       style={{ opacity, y }}
+      id="home"
       className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-between font-serif bg-[#82a1fd] relative overflow-hidden px-4 lg:px-0"
     >
-      <div className="flex h-auto lg:h-screen justify-start items-start w-full lg:w-3/5 mt-10 lg:mt-0">
+      <div className="flex h-auto lg:h-screen justify-start items-start w-full lg:w-3/5 mt-24">
         <div className="mx-4 lg:m-20 flex flex-col items-start w-full">
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="flex items-center bg-[#DFFD6E] w-full lg:w-[80%] rounded-t-[40px] h-20 lg:h-32 px-3"
+            className="flex items-center bg-[#DFFD6E] w-full lg:w-[80%] rounded-t-[40px] h-24 lg:h-32 px-3"
           >
             <img 
               src="/images/home2.png" 
@@ -52,7 +53,7 @@ export default function Home() {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-        className="w-full lg:w-1/2 h-[40vh] lg:h-full mt-4 lg:mt-0"
+        className="w-full lg:w-1/2 h-full lg:h-full mt-4 lg:mt-0"
       >
         <img
           src="/images/home1.png"

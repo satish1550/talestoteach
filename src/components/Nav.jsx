@@ -15,17 +15,45 @@ export default function Nav() {
   }, []);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    // Close menu first
     setMenuOpen(false);
+
+    // Wait for menu animation to complete
+    setTimeout(() => {
+      const element = document.getElementById(id.toLowerCase());
+      if (element) {
+        const navHeight = 64;
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        
+        // Scroll with offset
+        window.scrollTo({
+          top: elementTop - navHeight,
+          behavior: "smooth"
+        });
+      }
+    }, 300);
+  };
+
+  const topLineVariants = {
+    closed: { rotate: 0, y: 0 },
+    open: { rotate: 45, y: 8 }
+  };
+
+  const middleLineVariants = {
+    closed: { opacity: 1, x: 0 },
+    open: { opacity: 0, x: 20 }
+  };
+
+  const bottomLineVariants = {
+    closed: { rotate: 0, y: 0 },
+    open: { rotate: -45, y: -8 }
   };
 
   return (
     <motion.nav
-      className={`sticky top-0 bg-[#DFFD6E] z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''
-        }`}
+      className={`fixed top-0 left-0 right-0 bg-[#DFFD6E] z-50 transition-all duration-300 ${
+        isScrolled ? 'shadow-lg' : ''
+      }`}
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center px-4 lg:px-6 h-16">
@@ -45,40 +73,45 @@ export default function Nav() {
 
           <div className="hidden md:flex gap-8">
             {pages.map((page, index) => (
-              <motion.div
+              <motion.button
                 key={index}
                 whileHover={{ scale: 1.1 }}
-                onClick={() => scrollToSection(page.toLowerCase())}
-                className="cursor-pointer font-medium hover:text-red-500 transition-colors duration-300"
+                onClick={() => scrollToSection(page)}
+                className="cursor-pointer font-medium hover:text-red-500 transition-colors duration-300 bg-transparent"
               >
                 {page}
-              </motion.div>
+              </motion.button>
             ))}
           </div>
 
           <motion.div
-            className="md:hidden cursor-pointer p-2"
+            className="md:hidden cursor-pointer p-2 w-8 h-8 flex flex-col justify-center items-center"
             onClick={() => setMenuOpen(!menuOpen)}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="space-y-1">
+            <div className="relative w-6 h-6 mr-12">
               <motion.span
-                animate={{
-                  rotate: menuOpen ? 45 : 0,
-                  translateY: menuOpen ? 8 : 0
-                }}
-                className="block h-0.5 w-6 bg-black origin-center transition-all duration-300"
+                initial="closed"
+                animate={menuOpen ? "open" : "closed"}
+                variants={topLineVariants}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="absolute block h-0.5 w-6 bg-black"
+                style={{ top: "2px" }}
               />
               <motion.span
-                animate={{ opacity: menuOpen ? 0 : 1 }}
-                className="block h-0.5 w-6 bg-black transition-all duration-300"
+                initial="closed"
+                animate={menuOpen ? "open" : "closed"}
+                variants={middleLineVariants}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="absolute top-1/2 -translate-y-1/2 block h-0.5 w-6 bg-black"
               />
               <motion.span
-                animate={{
-                  rotate: menuOpen ? -45 : 0,
-                  translateY: menuOpen ? -8 : 0
-                }}
-                className="block h-0.5 w-6 bg-black origin-center transition-all duration-300"
+                initial="closed"
+                animate={menuOpen ? "open" : "closed"}
+                variants={bottomLineVariants}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="absolute block h-0.5 w-6 bg-black"
+                style={{ bottom: "0px" }}
               />
             </div>
           </motion.div>
@@ -95,16 +128,16 @@ export default function Nav() {
             >
               <div className="flex flex-col items-center py-4 space-y-4">
                 {pages.map((page, index) => (
-                  <motion.div
+                  <motion.button
                     key={index}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => scrollToSection(page.toLowerCase())}
-                    className="cursor-pointer font-medium hover:text-red-500 transition-colors duration-300 w-full text-center py-2"
+                    onClick={() => scrollToSection(page)}
+                    className="cursor-pointer font-medium hover:text-red-500 transition-colors duration-300 w-full text-center py-2 bg-transparent"
                   >
                     {page}
-                  </motion.div>
+                  </motion.button>
                 ))}
               </div>
             </motion.div>

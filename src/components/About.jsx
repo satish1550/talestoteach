@@ -8,7 +8,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, threshold: 0.2 });
 
   return (
-    <div ref={ref} className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-between font-serif bg-[#dffd6e] p-4 lg:p-0 overflow-hidden">
+    <div ref={ref} id="about" className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-between font-serif bg-[#dffd6e] p-4 lg:p-0 overflow-hidden">
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -18,7 +18,7 @@ export default function About() {
         <img
           src="/images/about1.png"
           alt="Satish"
-          className="w-fit h-full object-cover rounded-2xl lg:rounded-none"
+          className="lg:w-fit w-full h-full object-cover rounded-2xl lg:rounded-none"
         />
       </motion.div>
       

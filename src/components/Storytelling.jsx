@@ -13,7 +13,7 @@ export default function Storytelling() {
   };
 
   return (
-    <div ref={ref} className="w-full min-h-screen font-serif bg-[#eeb3e7] flex flex-col items-center justify-center p-4 lg:p-10">
+    <div ref={ref} id="storytelling" className="w-full min-h-screen font-serif bg-[#eeb3e7] flex flex-col items-center justify-center p-4 lg:p-10">
       <motion.h1 
         initial={{ opacity: 0, y: -30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}

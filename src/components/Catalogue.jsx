@@ -13,12 +13,12 @@ export default function Catalogue() {
   };
 
   return (
-    <div ref={ref} className="w-full min-h-screen text-white font-serif pb-5 bg-[#82a1fd] px-4 lg:px-0">
+    <div ref={ref} id="catalogue" className="w-full min-h-screen text-white font-serif pb-5 bg-[#82a1fd] px-4 lg:px-0">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col lg:flex-row items-center justify-between mx-4 lg:mx-36 my-10 lg:my-20 space-y-4 lg:space-y-0"
+        className="flex flex-col lg:flex-row items-center justify-between mx-4 lg:mx-36 py-10 lg:py-20 space-y-4 lg:space-y-0"
       >
         <h1 className="text-4xl lg:text-6xl font-light">Story Books</h1>
         <button className="h-10 w-fit bg-[#EEB4E7] font-bold rounded-full hover:bg-pink-400 transition duration-300 px-3 text-black">
@@ -26,7 +26,7 @@ export default function Catalogue() {
         </button>
       </motion.div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8 px-4 lg:px-0">
+      <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8 px-4 lg:px-0">
         {/* Bablu Section */}
         <motion.div 
           initial="hidden"
