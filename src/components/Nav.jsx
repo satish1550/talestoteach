@@ -51,7 +51,7 @@ export default function Nav() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 bg-[#DFFD6E] z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 bg-white z-50 transition-all duration-300 ${
         isScrolled ? 'shadow-lg' : ''
       }`}
     >
@@ -66,7 +66,7 @@ export default function Nav() {
               alt="Tales To Teach"
               className="w-8 mr-2"
             />
-            <h1 className="font-bold text-xl lg:text-2xl bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">
+            <h1 className="font-bold text-xl lg:text-2xl text-black">
               Tales To Teach
             </h1>
           </motion.div>
@@ -77,7 +77,7 @@ export default function Nav() {
                 key={index}
                 whileHover={{ scale: 1.1 }}
                 onClick={() => scrollToSection(page)}
-                className="cursor-pointer font-medium hover:text-red-500 transition-colors duration-300 bg-transparent"
+                className="cursor-pointer font-medium hover:font-bold transition-colors duration-300 bg-transparent"
               >
                 {page}
               </motion.button>
