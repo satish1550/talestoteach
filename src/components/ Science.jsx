@@ -15,7 +15,7 @@ export default function Science() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="w-full lg:w-[50%] px-4 lg:m-20"
             >
-                <h1 className="text-4xl lg:text-7xl pb-8 text-center lg:text-left">Science Theatre</h1>
+                <h1 className="text-4xl lg:text-7xl pb-6 pt-3 text-center lg:text-left">Science Theatre</h1>
                 <div className="w-full">
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}

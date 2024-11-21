@@ -76,18 +76,10 @@ export default function Catalogue() {
           className="relative w-full lg:w-96"
         >
           <img
-            src="/images/catalogue3.png"
+            src="/images/catalogue3.jpg"
             alt="Scientist Grandpa"
             className="w-full lg:w-80 h-[400px] lg:h-[470px] rounded-lg mx-auto object-cover"
           />
-          <span className="absolute text-3xl top-36 left-1/2 -translate-x-1/2 lg:left-[124px] lg:translate-x-0 font-bold" style={{
-            fontStyle: "normal",
-            color: "rgb(245, 48, 152)",
-            fontKerning: "none",
-            textDecoration: "none",
-          }}>
-            Grandpa
-          </span>
           <p className="bg-white text-black text-lg lg:text-xl font-light rounded-xl p-5 mt-4 shadow-md mx-auto">
             Explore a college student's fond memories with his neighbor,
             Scientist Grandpa. Through their stories, we understand how

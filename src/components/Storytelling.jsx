@@ -18,7 +18,7 @@ export default function Storytelling() {
         initial={{ opacity: 0, y: -30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
         transition={{ duration: 0.8 }}
-        className="text-3xl lg:text-[60px] text-white font-semibold mb-6 lg:mb-10 text-center"
+        className="text-3xl lg:text-[60px] text-white font-semibold mb-6 lg:pb-24 text-center"
       >
         Benefits of using Storytelling in Academics
       </motion.h1>
@@ -48,7 +48,7 @@ export default function Storytelling() {
                 transition={{ duration: 0.5, delay: 0.2 * index }}
                 className="flex items-center gap-4"
               >
-                <img src={item.img} className="w-8 lg:w-10" alt={item.text} />
+                <img src={item.img} className="w-8 h-11 lg:w-10" alt={item.text} />
                 <p className="text-xl lg:text-3xl font-medium">{item.text}</p>
               </motion.div>
             ))}
@@ -79,7 +79,7 @@ export default function Storytelling() {
                 transition={{ duration: 0.5, delay: 0.2 * index }}
                 className="flex items-center gap-4"
               >
-                <img src={item.img} className="w-8 lg:w-10" alt={item.text} />
+                <img src={item.img} className="w-8 h-9 lg:w-10 lg:h-11" alt={item.text} />
                 <p className="text-xl lg:text-3xl font-medium">{item.text}</p>
               </motion.div>
             ))}

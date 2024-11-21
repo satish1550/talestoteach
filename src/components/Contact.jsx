@@ -55,14 +55,14 @@ export default function Contact() {
         </motion.div>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8 lg:mt-0">
+      <div className="grid grid-cols-2 place-items-center gap-3 md:gap-5 lg:gap-8 mt-8 lg:mt-0 px-2 md:px-4">
         <motion.img
           initial={{ opacity: 0, rotate: 15 }}
           animate={isInView ? { opacity: 1, rotate: 15 } : { opacity: 0, rotate: 15 }}
           transition={{ duration: 0.5 }}
           src="/images/contact1.png"
           alt="contact1"
-          className="h-60 lg:h-80"
+          className="h-52 md:h-64 lg:h-80 w-auto"
         />
         <motion.img
           initial={{ opacity: 0, rotate: -5 }}
@@ -70,15 +70,15 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.2 }}
           src="/images/contact2.png"
           alt="contact2"
-          className="h-60 lg:h-80 mt-5 lg:mt-32 -ml-10"
+          className="h-52 md:h-64 lg:h-80 w-auto mt-5 lg:mt-32"
         />
         <motion.img
           initial={{ opacity: 0, rotate: -10 }}
           animate={isInView ? { opacity: 1, rotate: -10 } : { opacity: 0, rotate: -10 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           src="/images/contact3.png"
-          alt="contact3"
-          className="h-60 lg:h-80"
+          alt="contact3" 
+          className="h-52 md:h-64 lg:h-80 w-auto"
         />
         <motion.img
           initial={{ opacity: 0, rotate: 10 }}
@@ -86,7 +86,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.6 }}
           src="/images/contact4.png"
           alt="contact4"
-          className="h-60 lg:h-80 ml-7"
+          className="h-52 md:h-64 lg:h-80 w-auto"
         />
       </div>
     </div>
