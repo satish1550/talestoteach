@@ -1,2 +1,1 @@
-### Website: 
-👉 [Tales To Teach](https://talestoteach.netlify.app/)
+### [Tales To Teach](https://talestoteach.netlify.app/)
